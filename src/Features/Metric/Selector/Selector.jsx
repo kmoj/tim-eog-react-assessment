@@ -24,6 +24,7 @@ const Selector = () => {
   return (
     <div style={styles.selectWrapper}>
       <ReactSelect
+        placeholder="Select..."
         options={data.getMetrics || []}
         isMulti
         value={selectedMetrics}
