@@ -17,7 +17,6 @@ const query = `{
 const Selector = () => {
   const dispatch = useDispatch();
   const selectedMetrics = useSelector(state => state.metrics.selected);
-  // fetch metric options
   const [result] = useQuery({ query });
   const { data = {} } = result;
 

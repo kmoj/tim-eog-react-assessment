@@ -1,3 +1,3 @@
 export default {
-    selectWrapper: { width: '20%', marginLeft: 'auto', marginRight: '1rem', marginTop: '1rem' },
+    selectWrapper: { width: '30rem', marginLeft: 'auto', marginRight: '1rem', mariginTop: '1rem' },
   };

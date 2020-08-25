@@ -7,8 +7,11 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import 'react-toastify/dist/ReactToastify.css';
 import Metric from './Features/Metric/Metric';
 import Chart from './Features/Metric/Chart/Chart';
+import LiveValues from './Features/Metric/LiveValues/LiveValues';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 const store = createStore();
 const theme = createMuiTheme({
@@ -31,8 +34,18 @@ const App = () => (
     <Provider store={store}>
       <Wrapper>
         <Header />
-        <Metric />
-        <Chart />
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Metric />
+          </Grid>
+          <Grid item xs={2}>
+            <LiveValues />
+          </Grid>
+          <Grid item xs={10}>
+            <Chart />
+          </Grid>
+        </Grid>
+
         <ToastContainer />
       </Wrapper>
     </Provider>
